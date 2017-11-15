@@ -1,0 +1,9 @@
+body{
+    background: white url(background.jpg);
+}
+.navbar{
+    border-radius: 0;
+}
+.navbar-brand{
+    font-family: 'Times New Roman', cursive;
+}
