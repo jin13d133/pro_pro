@@ -4,7 +4,7 @@
     <title>My_hash</title>
 </head>
 <body>
-    {% if all_hash %}
+    {% if all_virus %}
         <h3>Here are all my Virus_hash: </h3>
             <table border="1">
                 <tr>
@@ -13,7 +13,7 @@
                     <td>detail</td>
                     <td>date</td>
                 </tr>
-                {% for item in all_hash %}
+                {% for item in all_virus %}
                 <tr>
                     <td><a href="" id="detail">{{ item.virus_file_name }}</a></td>
                     <td>{{ item.virus_hash_value }}</td>

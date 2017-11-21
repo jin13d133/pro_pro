@@ -8,7 +8,7 @@ import os, hashlib,requests
 
 def temp(request):
     context={
-        'all_hash': Hash.objects.all(),
+        'all_my_hash': Hash.objects.all(),
         'temp':'True'
     }
     return TemplateResponse(request, 'temp.html', context)
@@ -16,10 +16,10 @@ def profile(request):
     context={
         'profile':'True'
     }
-    return TemplateResponse(request, 'profile.html', context)
+    return TemplateResponse(request, 'temp.html', context)
 def my_hash(request):
     context={
-        'all_hash': Hash.objects.all(),
+        'all_my_hash': Hash.objects.all(),
         'my_hash':'True'
     }
     return TemplateResponse(request, 'temp.html', context)
@@ -43,7 +43,7 @@ def create(request):
             print e
 
     context ={
-        'all': Hash.objects.all(),
+        'all_create': Hash.objects.all(),
         'create':'True'
 
     }
@@ -72,11 +72,12 @@ def virus_hash(request):
         print Hash.hash_type
     try:
         r = Virus_hash.objects.create(virus_file_name=Hash.hash_name, virus_hash_value=Hash.hash_value, virus_detail='aaa')
+
     except Exception as e:
         print e
 
     context={
-        'all_hash': Virus_hash.objects.all(),
+        'all_virus': Virus_hash.objects.all(),
         'virus_hash':'True'
     }
     return TemplateResponse(request, 'virus_hash.html', context)

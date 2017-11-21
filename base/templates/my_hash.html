@@ -5,7 +5,7 @@
     <title>My_hash</title>
 </head>
 <body>
-    {% if all_hash %}
+    {% if all_my_hash %}
         <h3>Here are all my Hashs: </h3>
             <table border="1">
                 <tr>
@@ -14,7 +14,7 @@
                     <td>type</td>
                     <td>date</td>
                 </tr>
-                {% for item in all_hash %}
+                {% for item in all_my_hash %}
                 <tr>
                     <td><a href="" id="detail">{{ item.hash_name }}</a></td>
                     <td>{{ item.hash_value }}</td>

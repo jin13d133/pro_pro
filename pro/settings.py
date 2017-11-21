@@ -80,6 +80,18 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'testdjango',
+#        'USER': 'root',
+#        'PASSWORD': 'cisco',
+#        'OPTIONS': {
+#            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
+#          #'autocommit': True,
+#        },
+#    }
+#}
 
 
 # Password validation
